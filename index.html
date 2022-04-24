@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Test</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 form">
+          <h1>Rectangle calculator</h1>
+          <!-- width input -->
+          <label>Width</label>
+          <input
+            id="width"
+            class="form-control mb-3"
+            type="number"
+            placeholder="Type Width here"
+          />
+          <label>Height</label>
+          <input
+            id="height"
+            class="form-control mb-3 height"
+            type="number"
+            placeholder="Type height here"
+          />
+          <label>Position (x)</label>
+          <input
+            id="x"
+            class="form-control mb-3"
+            type="number"
+            placeholder="Type position here"
+          />
+          <label>Position (y)</label>
+          <input
+            id="y"
+            class="form-control mb-3"
+            type="number"
+            placeholder="Type Position here"
+          />
+          <!-- area-->
+          <label class="areaTitle mb-3 mt-3">Rectangle Area</label>
+
+          <div id="area" class="mb-3 area border border-secondary">
+            Calculates the Area
+          </div>
+          <!-- calculate button -->
+          <button
+            type="button"
+            class="calcCanvas mt-3 mb-3 btn btn-success"
+            onclick="onCalc()"
+          >
+            Calculate and Draw
+          </button>
+          <!-- reset button -->
+          <button
+            type="button"
+            class="clearCanvas mt-3 mb-3 btn btn-success"
+            onclick="onReset()"
+          >
+            reset
+          </button>
+        </div>
+        <div class="col-md-6">
+          <div class="row"></div>
+          <div class="row">
+            <!-- Canvas -->
+            <canvas class="mb-3 mt-3" id="myCanvas" width="300" height="300">
+            </canvas>
+          </div>
+          <div class="row"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
